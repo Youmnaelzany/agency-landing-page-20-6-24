@@ -2,24 +2,323 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import '@/styles/globals.css';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title='Sunnyside agency landing page.'>
+  <!-- The Header -->
   <Header />
-  <main></main>
+  <!-- The Main -->
+  <main>
+    <!-- We are creatives -->
+    <section
+      class='mb-[17rem] mt-[5.5rem] flex items-center justify-center text-center md:mb-[33.5rem] md:mt-[7.25rem]'
+    >
+      <h1
+        class='relative w-[20.4375rem] font-Fraunces text-[2.5rem] font-black uppercase leading-normal tracking-[0.39063rem] text-white md:w-full'
+      >
+        We are creatives
+      </h1>
+      <img
+        src='/images/shared/icon-arrow-down.svg'
+        alt=''
+        class='hidden md:absolute md:left-[50%] md:top-[23.03rem] md:block'
+      />
+    </section>
+    <!-- Transform your brand -->
+    <section class='flex flex-col-reverse md:flex-row'>
+      <div
+        class='mx-auto flex flex-col items-center justify-center py-16 text-center md:items-start md:text-left'
+      >
+        <h2
+          class='mb-6 w-[20.4375rem] font-Fraunces text-[2rem] font-black leading-normal tracking-[-0.01431rem] text-[#24303E] md:mb-8 md:w-[27.8125rem] md:text-[2.5rem] md:tracking-[0.01788rem]'
+        >
+          Transform your brand
+        </h2>
+        <p
+          class='mb-8 w-[20.4375rem] font-Barlow text-lg font-semibold leading-[1.875rem] tracking-[-0.00806rem] text-[#808397] md:mb-10 md:w-[27.8125rem]'
+        >
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
+        </p>
+        <div class='flex items-start'>
+          <a
+            href='/'
+            class='relative z-50 cursor-pointer font-Fraunces text-[0.9375rem] font-black uppercase tracking-[0.0625rem] text-[#24303E] after:absolute after:-left-2 after:bottom-0 after:z-30 after:h-[0.625rem] after:w-[8.5625rem] after:rounded-[1.75rem] after:bg-[#FAD400]/25 hover:after:bg-[#FAD400]'
+            >Learn more</a
+          >
+        </div>
+      </div>
+      <picture>
+        <source
+          media='(min-width: 768px)'
+          srcset='/images/desktop/image-transform.jpg'
+        />
+        <img src='/images/mobile/image-transform.jpg' alt='' class='' />
+      </picture>
+    </section>
+    <!-- Stand out to the right audience -->
+    <section class='flex flex-col-reverse md:flex-row-reverse'>
+      <div
+        class='mx-auto flex flex-col items-center justify-center py-16 text-center md:items-start md:text-left'
+      >
+        <h2
+          class='mb-6 w-[20.4375rem] font-Fraunces text-[2rem] font-black leading-normal tracking-[-0.01431rem] text-[#24303E] md:mb-8 md:w-[27.8125rem] md:text-[2.5rem] md:tracking-[0.01788rem]'
+        >
+          Stand out to the right audience
+        </h2>
+        <p
+          class='mb-8 w-[20.4375rem] font-Barlow text-lg font-semibold leading-[1.875rem] tracking-[-0.00806rem] text-[#808397] md:mb-10 md:w-[27.8125rem]'
+        >
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we’ll build and extend
+          your brand in digital places.
+        </p>
+        <div class='flex items-start'>
+          <a
+            href='/'
+            class='relative z-50 cursor-pointer font-Fraunces text-[0.9375rem] font-black uppercase tracking-[0.0625rem] text-[#24303E] after:absolute after:-left-2 after:bottom-0 after:z-30 after:h-[0.625rem] after:w-[8.5625rem] after:rounded-[1.75rem] after:bg-[#FE7766]/25 hover:after:bg-[#FE7766]'
+            >Learn more</a
+          >
+        </div>
+      </div>
+      <picture>
+        <source
+          media='(min-width: 768px)'
+          srcset='/images/desktop/image-stand-out.jpg'
+        />
+        <img src='/images/mobile/image-stand-out.jpg' alt='' class='' />
+      </picture>
+    </section>
+    <!-- Graphic design & photography -->
+    <section class='flex flex-col md:flex-row'>
+      <!-- Graphic design -->
+      <div class='relative'>
+        <picture>
+          <source
+            media='(min-width: 768px)'
+            srcset='/images/desktop/image-graphic-design.jpg'
+          />
+          <img
+            src='/images/mobile/image-graphic-design.jpg'
+            alt=''
+            class='z-50'
+          />
+        </picture>
+        <div
+          class='absolute bottom-[3.69rem] left-[7%] flex w-[20.4375rem] flex-col items-center justify-center gap-[1.69rem] text-center md:left-[26%]'
+        >
+          <h2
+            class='font-Fraunces text-[1.75rem] font-black leading-normal tracking-[-0.0125rem] text-[#24554A]'
+          >
+            Graphic design
+          </h2>
+          <p
+            class='font-Barlow text-base font-semibold leading-[1.6875rem] tracking-[-0.00713rem] text-[#24554A]'
+          >
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients&#39;
+            attention.
+          </p>
+        </div>
+      </div>
+      <!-- Photography -->
+      <div class='relative'>
+        <picture>
+          <source
+            media='(min-width: 768px)'
+            srcset='/images/desktop/image-photography.jpg'
+          />
+          <img src='/images/mobile/image-photography.jpg' alt='' class='z-50' />
+        </picture>
+        <div
+          class='absolute bottom-[3.69rem] left-[7%] flex w-[20.4375rem] flex-col items-center justify-center gap-[1.69rem] text-center md:left-[26%]'
+        >
+          <h2
+            class='font-Fraunces text-[1.75rem] font-black leading-normal tracking-[-0.0125rem] text-[#052C3B]'
+          >
+            Photography
+          </h2>
+          <p
+            class='font-Barlow text-base font-semibold leading-[1.6875rem] tracking-[-0.00713rem] text-[#19536C]'
+          >
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Client Testimonials -->
+    <section
+      class='mx-6 my-16 flex flex-col items-center justify-center gap-16 text-center md:mx-[10.31rem] md:my-40 md:gap-20'
+    >
+      <h2
+        class='font-Fraunces text-base font-black uppercase leading-normal tracking-[0.25rem] text-[#A7AAAD] md:text-xl md:tracking-[0.3125rem]'
+      >
+        Client testimonials
+      </h2>
+      <div
+        class='flex flex-col items-center justify-center gap-8 md:flex-row md:justify-between md:gap-[1.88rem]'
+      >
+        <!-- Emily R. 's Testimonial -->
+        <div class='flex flex-col items-center justify-center gap-8'>
+          <!-- Img -->
+          <div class=''>
+            <img
+              src='/images/shared/image-emily.jpg'
+              alt='Emily R.'
+              class='size-[4.5rem] rounded-full'
+            />
+          </div>
+          <!-- Testimonial -->
+          <div class=''>
+            <p
+              class='w-[20.4375rem] font-Barlow text-lg font-semibold leading-8 tracking-[-0.00806rem] text-[#5B636D] md:w-[21.875rem]'
+            >
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+          </div>
+          <!-- Name & Title -->
+          <div class='flex flex-col gap-[0.56rem]'>
+            <h3
+              class='font-Fraunces text-lg font-black leading-normal tracking-[-0.00806rem] text-[#24303E]'
+            >
+              Emily R.
+            </h3>
+            <h4
+              class='font-Barlow text-sm font-semibold leading-[1.5625rem] tracking-[-0.00625rem] text-[#A7AAAD]'
+            >
+              Marketing Director
+            </h4>
+          </div>
+        </div>
+        <!-- Thomas S. 's Testimonial -->
+        <div class='flex flex-col items-center justify-center gap-8'>
+          <!-- Img -->
+          <div class=''>
+            <img
+              src='/images/shared/image-thomas.jpg'
+              alt='Thomas S.'
+              class='size-[4.5rem] rounded-full'
+            />
+          </div>
+          <!-- Testimonial -->
+          <div class=''>
+            <p
+              class='w-[20.4375rem] font-Barlow text-lg font-semibold leading-8 tracking-[-0.00806rem] text-[#5B636D] md:w-[21.875rem]'
+            >
+              Sunnyside&#39;s enthusiasm coupled with their keen interest in our
+              brand&#39;s success made it a satisfying and enjoyable experience.
+            </p>
+          </div>
+          <!-- Name & Title -->
+          <div class='flex flex-col gap-[0.56rem]'>
+            <h3
+              class='font-Fraunces text-lg font-black leading-normal tracking-[-0.00806rem] text-[#24303E]'
+            >
+              Thomas S.
+            </h3>
+            <h4
+              class='font-Barlow text-sm font-semibold leading-[1.5625rem] tracking-[-0.00625rem] text-[#A7AAAD]'
+            >
+              Chief Operating Officer
+            </h4>
+          </div>
+        </div>
+        <!-- Jennie F. 's Testimonial -->
+        <div class='flex flex-col items-center justify-center gap-8'>
+          <!-- Img -->
+          <div class=''>
+            <img
+              src='/images/shared/image-jennie.jpg'
+              alt='Jennie F.'
+              class='size-[4.5rem] rounded-full'
+            />
+          </div>
+          <!-- Testimonial -->
+          <div class=''>
+            <p
+              class='w-[20.4375rem] font-Barlow text-lg font-semibold leading-8 tracking-[-0.00806rem] text-[#5B636D] md:w-[21.875rem]'
+            >
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+          </div>
+          <!-- Name & Title -->
+          <div class='flex flex-col gap-[0.56rem]'>
+            <h3
+              class='font-Fraunces text-lg font-black leading-normal tracking-[-0.00806rem] text-[#24303E]'
+            >
+              Jennie F.
+            </h3>
+            <h4
+              class='font-Barlow text-sm font-semibold leading-[1.5625rem] tracking-[-0.00625rem] text-[#A7AAAD]'
+            >
+              Business Owner
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Photo Gallery -->
+    <section class='grid grid-cols-2 md:grid-cols-4'>
+      <!-- Milkbottles -->
+      <picture>
+        <source
+          media='(min-width: 768px)'
+          srcset='/images/desktop/image-gallery-milkbottles.jpg'
+        />
+        <img
+          src='/images/mobile/image-gallery-milkbottles.jpg'
+          alt='milkbottles'
+        />
+      </picture>
+      <!-- Orange Juice -->
+      <picture>
+        <source
+          media='(min-width: 768px)'
+          srcset='/images/desktop/image-gallery-orange.jpg'
+        />
+        <img src='/images/mobile/image-gallery-orange.jpg' alt='Orange Juice' />
+      </picture>
+      <!-- Cone -->
+      <picture>
+        <source
+          media='(min-width: 768px)'
+          srcset='/images/desktop/image-gallery-cone.jpg'
+        />
+        <img src='/images/mobile/image-gallery-cone.jpg' alt='Cone' />
+      </picture>
+      <!-- Sugarcubes -->
+      <picture>
+        <source
+          media='(min-width: 768px)'
+          srcset='/images/desktop/image-gallery-sugarcubes.jpg'
+        />
+        <img
+          src='/images/mobile/image-gallery-sugar-cubes.jpg'
+          alt='milkbottles'
+        />
+      </picture>
+    </section>
+  </main>
+  <!-- The Footer -->
+  <Footer />
 </Layout>
 
 <style is:global>
   @media (min-width: 370px) {
     body {
-      background: url('/public/images/mobile/image-header.jpg') no-repeat;
+      background: url('/images/mobile/image-header.jpg') no-repeat;
       background-size: contain;
     }
   }
 
   @media (min-width: 768px) {
     body {
-      background: url('/public/images/desktop/image-header.jpg') no-repeat;
+      background: url('/images/desktop/image-header.jpg') no-repeat;
       background-size: contain;
     }
   }
