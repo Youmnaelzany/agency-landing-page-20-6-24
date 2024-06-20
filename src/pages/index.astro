@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import '@/styles/globals.css';
+---
+
+<Layout title='Sunnyside agency landing page.'>
+  <Header />
+  <main></main>
+</Layout>
+
+<style is:global>
+  @media (min-width: 370px) {
+    body {
+      background: url('/public/images/mobile/image-header.jpg') no-repeat;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: 768px) {
+    body {
+      background: url('/public/images/desktop/image-header.jpg') no-repeat;
+      background-size: contain;
+    }
+  }
+</style>

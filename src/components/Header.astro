@@ -1,0 +1,91 @@
+---
+import '@/styles/globals.css';
+---
+
+<header class='relative mx-6 mt-8 flex items-center justify-between md:mx-8'>
+  <div class='flex items-center justify-between gap-[11.21rem]'>
+    <a href='/' aria-label='logo'
+      ><img src='/public/images/shared/logo.svg' alt='logo' /></a
+    >
+    <button type='button' class='md:hidden' id='menu-button'>
+      <img src='/public/images/shared/icon-hamburger.svg' alt='' />
+    </button>
+  </div>
+  <!-- Mobile Menu -->
+  <nav
+    class='absolute left-0 top-16 hidden h-[19.0625rem] w-[20.5625rem] bg-[#FFFCF8] py-[2.44rem]'
+    id='mobile-menu'
+  >
+    <div class='flex flex-col items-center justify-center gap-8 text-center'>
+      <ul class='flex flex-col items-center justify-center gap-8'>
+        <li>
+          <a
+            href='/'
+            class='cursor-pointer font-Barlow text-xl font-semibold leading-[1.5625rem] tracking-[-0.00894rem] text-[#808397]'
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href='/'
+            class='cursor-pointer font-Barlow text-xl font-semibold leading-[1.5625rem] tracking-[-0.00894rem] text-[#808397]'
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href='/'
+            class='cursor-pointer font-Barlow text-xl font-semibold leading-[1.5625rem] tracking-[-0.00894rem] text-[#808397]'
+            >Projects</a
+          >
+        </li>
+      </ul>
+      <button
+        type='button'
+        class='h-14 w-[8.75rem] rounded-[1.75rem] bg-[#FBD600] font-Fraunces text-[0.9375rem] font-bold uppercase leading-[1.5625rem] tracking-[-0.00669rem] text-[#24303E]'
+        >Contact</button
+      >
+    </div>
+  </nav>
+  <!-- Desktop Menu -->
+  <nav class='hidden md:flex'>
+    <div class='flex items-center justify-center gap-[2.94rem]'>
+      <ul class='flex items-center justify-center gap-[2.94rem]'>
+        <li>
+          <a
+            href='/'
+            class='cursor-pointer font-Barlow text-lg font-semibold leading-[1.5625rem] tracking-[-0.00806rem] text-white'
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href='/'
+            class='cursor-pointer font-Barlow text-lg font-semibold leading-[1.5625rem] tracking-[-0.00806rem] text-white'
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href='/'
+            class='cursor-pointer font-Barlow text-lg font-semibold leading-[1.5625rem] tracking-[-0.00806rem] text-white'
+            >Projects</a
+          >
+        </li>
+      </ul>
+      <button
+        type='button'
+        class='h-14 w-[8.75rem] cursor-pointer rounded-[1.75rem] bg-white font-Fraunces text-[0.9375rem] font-bold uppercase leading-[1.5625rem] tracking-[-0.00669rem] text-[#24303E] transition-colors duration-300 ease-in hover:bg-opacity-[0.2537] hover:text-white'
+        >Contact</button
+      >
+    </div>
+  </nav>
+</header>
+
+<script is:inline>
+  const menuButton = document.getElementById('menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
